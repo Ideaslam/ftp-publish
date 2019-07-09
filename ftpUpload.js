@@ -6,7 +6,7 @@ exports.ftpUpload =function (srcPath, DestPath , obj ){
 return new Promise(resolve => {
 var config ={} ; 
 
-config.host = obj.host ;
+config.host = obj.host ; 
 config.port = obj.port ;
 config.user = obj.user;
 config.password = obj.password;
