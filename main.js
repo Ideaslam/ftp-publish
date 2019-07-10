@@ -5,7 +5,7 @@ var Dir   = require('./GetDirectories');
 var ftp   = require('./ftpUpload');
 
 
-// Send Code .
+// Send Code . 
 publish (ServerConfig.generalSrcPath ,ServerConfig.rootFolder ,ServerConfig.generalDestPath , ServerConfig);	
 
 

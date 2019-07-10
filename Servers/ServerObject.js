@@ -8,7 +8,7 @@ exports = module.exports ={}
 exports.host = "";   // host or Ip
 exports.port = 21;  // ftp port
 exports.user = "";    // username
-exports.password = ""; // password
+exports.password = ""; // password  
  
 
 
