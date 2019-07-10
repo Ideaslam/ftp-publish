@@ -15,11 +15,11 @@ exports.password = ""; // password
 
 // Src paths
 exports.generalSrcPath ='C:/inetpub/wwwroot';  // changable 
-exports.rootFolder ='islahapitest'; // changable
+exports.rootFolder ='SrcPublishFolderName'; // changable
 
 // Remote Server Paths
-exports.Name = "islahapitest";  // changable
-exports.path = "C:/inetpub/wwwroot/islahapitest"; // changable
+exports.Name = "DestPublishFolderName";  // changable
+exports.path = "C:/inetpub/wwwroot/DestPublishFolderName"; // changable
 exports.DestPath = "C:/inetpub/wwwroot";  // changable
 exports.generalDestPath ='' ; // always Empty
 
