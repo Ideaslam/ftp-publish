@@ -1,25 +1,21 @@
-var obj   = require('./Servers/ServerObject');
+var ServerConfig   = require('./Servers/ServerObject');
  
 var mkDir = require('./MakeDirectory');
 var Dir   = require('./GetDirectories');
 var ftp   = require('./ftpUpload');
 
 
-
- 
-
-
-var generalDestPath ='' ; // always Empty
-var generalSrcPath ='C:/inetpub/wwwroot';
-var rootFolder ='FolderName';
+// Send Code .
+publish (ServerConfig.generalSrcPath ,ServerConfig.rootFolder ,ServerConfig.generalDestPath , ServerConfig);	
 
 
-async function publish (path,folder,generalDestPath){
+//recursive function
+async function publish (path,folder,generalDestPath ,remoteConfig){
         var error ;
      	// Create the folder if not exist
 	    try{
 	     console.log('create Folder -- '+generalDestPath+'/'+folder) ;
-	     await  mkDir.MakeDirectory(folder,generalDestPath,obj);
+	     await  mkDir.MakeDirectory(folder,generalDestPath,remoteConfig);
 	     
 		}
 		catch(ex)
@@ -37,7 +33,7 @@ async function publish (path,folder,generalDestPath){
 			var fileDest = generalDestPath+'/'+folder+'/'+arr[i] ; 
 			console.log(fileSrc +'--'+fileDest) ;
 			try{
-			await ftp.ftpUpload(fileSrc,fileDest,obj);	
+			await ftp.ftpUpload(fileSrc,fileDest,remoteConfig);	
 		}catch(err){
 			console.log("error"+fileSrc+"--"+fileDest) ;
 		}
@@ -48,7 +44,7 @@ async function publish (path,folder,generalDestPath){
 			else{
 		 
 			
-			publish ( path+'/'+folder,arr[i]  ,generalDestPath+'/'+folder) ;	
+			publish ( path+'/'+folder,arr[i]  ,generalDestPath+'/'+folder,ServerConfig) ;	
 
 			
 			}
@@ -62,5 +58,5 @@ async function publish (path,folder,generalDestPath){
  
 
 
- publish (generalSrcPath ,rootFolder ,generalDestPath);	
+
 
