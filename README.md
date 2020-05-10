@@ -7,3 +7,6 @@ ServerObject.js is the file to tell about Your remote server ,You want to publis
 
 first , Create user for ftp server , then fill credentials on ServerObject.js , and main file 
 then it will work and publish your code . 
+
+
+Edit for new branch
