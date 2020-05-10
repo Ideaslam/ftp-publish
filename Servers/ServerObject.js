@@ -14,13 +14,13 @@ exports.password = ""; // password
 
 
 // Src paths
-exports.generalSrcPath ='C:/inetpub/wwwroot';  // changable 
-exports.rootFolder ='SrcPublishFolderName'; // changable
+exports.generalSrcPath ='';  // changable C:/inetpub/wwwroot
+exports.rootFolder =''; // changable SrcPublishFolderName
 
 // Remote Server Paths
-exports.Name = "DestPublishFolderName";  // changable
-exports.path = "C:/inetpub/wwwroot/DestPublishFolderName"; // changable
-exports.DestPath = "C:/inetpub/wwwroot";  // changable
+exports.Name = "";  // changable DestPublishFolderName
+exports.path = ""; // changable C:/inetpub/wwwroot/DestPublishFolderName
+exports.DestPath = "";  // changable C:/inetpub/wwwroot
 exports.generalDestPath ='' ; // always Empty
 
 
